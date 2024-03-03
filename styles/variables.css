@@ -1,1 +1,50 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --main-font-family: 'Inter', sans-serif;
+  --accent-font-family: 'PressStart2P-Regular', sans-serif;
+  --page-background-color: #000;
+  --main-background-color: #000;
+  --background-lines: #000;
+  --background-gradient-first: #007f0c;
+  --background-gradient-second: #004306;
+  --text-color: #00CC14;
+  --difference-color: #00CC14;
+  --accent-color: #00CC14;
+  --watermark-outline-color: #000;
+  --header-font-weight: 400;
+  --main-font-weight: 465;
+  --bold-font-weight: 785;
+  --heart-contour: #00CC14;
+  --heart-main-body: #00CC14;
+  --heart-core: #00CC14;
+  --heart-sparks: #FF0000;
+  --heart-red: #FF0000;
+}
+
+@media (width <=375px) {
+
+  .header {
+    grid-template-rows: 120px min-content min-content;
+  }
+
+  .main__card-title {
+    min-block-size: 52px;
+  }
+
+  .button__save {
+    max-inline-size: 306px;
+    min-block-size: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .floppy-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+}
