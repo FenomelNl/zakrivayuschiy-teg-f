@@ -307,7 +307,7 @@ button {
   width: 100%;
   height: 100%;
   background: var(--text-color);
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card__like-button:hover:after {
@@ -353,7 +353,7 @@ button {
   width: 100%;
   height: 100%;
   background: var(--text-color);
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .button__save:hover:after {
@@ -418,6 +418,7 @@ dialog::backdrop {
   width: 293px;
   height: 38px;
   transition: box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
 }
 
 .save__dialog-button:focus-visible {
@@ -438,7 +439,7 @@ dialog::backdrop {
   width: 100%;
   height: 100%;
   background: var(--text-color);
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .save__dialog-button:hover:after {
