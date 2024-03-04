@@ -21,28 +21,74 @@ button {
   padding: 0;
 }
 
+.button__text {
+  position: relative;
+  mix-blend-mode: difference;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  color: var(--difference-color);
+  z-index: 1;
+}
+
+.button__style {
+  position: relative;
+  border: 2px solid var(--accent-color);
+  background-color: var(--main-background-color);
+  transition: box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.card__like-button:focus-visible,
+.main__button-save:focus-visible,
+.main__dialog-button:focus-visible {
+  box-shadow: 2px 2px 0 var(--text-color);
+}
+
+.card__like-button:after,
+.main__button-save:after,
+.main__dialog-button:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  width: 100%;
+  height: 100%;
+  background: var(--text-color);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__like-button:hover:after,
+.main__button-save:hover:after,
+.main__dialog-button:hover:after {
+  transform: scaleX(1);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-color: var(--page-background-color);
   font-family: var(--main-font-family);
   font-variation-settings: "wght" var(--main-font-weight);
+  background-color: var(--page-background-color), #000;
 }
 
-.background {
+.page__background {
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
   background-size: cover;
   background-image:
     repeating-linear-gradient(90deg, var(--background-lines) 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(var(--background-lines) 0 2px, transparent 2px 4px),
-    linear-gradient(var(--background-gradient-first), var(--background-gradient-second));
+    repeating-linear-gradient(180deg, var(--background-lines) 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, var(--background-gradient-first) var(--gradient-opacity), var(--background-gradient-second));
 }
 
 .header {
   max-inline-size: 700px;
-  max-block-size: 368px;
   font-family: var(--accent-font-family);
   border: 2px solid var(--accent-color);
   background-color: var(--main-background-color);
@@ -60,13 +106,20 @@ button {
 }
 
 .header__main-title {
+  text-decoration: none;
+  text-transform: uppercase;
   color: var(--text-color);
   font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
   font-weight: var(--header-font-weight);
   line-height: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
 }
 
+.header__main-title:focus {
+  outline: none;
+}
+
 .header__subtitle {
+  text-transform: uppercase;
   color: var(--text-color);
   font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   font-weight: var(--header-font-weight);
@@ -87,22 +140,23 @@ button {
 }
 
 .theme-menu__item {
-  position: relative;
-  height: 14px;
+  display: grid;
   justify-self: flex-start;
+
+}
+
+.theme-menu__button {
+  width: 100%;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
   color: var(--text-color);
   font-size: 14px;
   line-height: 14px;
   font-weight: var(--header-font-weight);
 }
 
-.theme-menu__button {
-  width: 100%;
-  height: 14px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
 
 .theme-menu__button:hover {
   animation: menu__button-hover 0.3s ease forwards;
@@ -117,6 +171,7 @@ button {
 }
 
 .theme-menu__button::after {
+  position: absolute;
   content: '';
   display: block;
   width: 0%;
@@ -131,6 +186,7 @@ button {
 }
 
 .theme-menu__button:disabled {
+  animation: menu__button-hover 0.3s ease forwards;
   pointer-events: none;
 }
 
@@ -145,9 +201,9 @@ button {
   color: inherit;
 }
 
-.main {
+.main__cards {
   max-inline-size: 700px;
-  font-family: var(---main-font-family);
+  font-family: var(--main-font-family);
   color: var(--text-color);
   font-size: 21px;
   display: grid;
@@ -190,35 +246,35 @@ button {
   vertical-align: middle;
 }
 
-.main__card:nth-child(1) .filter {
+.filter-first {
   filter: blur(2px);
 }
 
-.main__card:nth-child(2) .filter {
+.filter-second {
   filter: brightness(50%);
 }
 
-.main__card:nth-child(3) .filter {
+.filter-third {
   filter: contrast(150%);
 }
 
-.main__card:nth-child(4) .filter {
+.filter-fourth {
   filter: hue-rotate(0.9turn);
 }
 
-.main__card:nth-child(5) .filter {
+.filter-fifth {
   filter: saturate(300%);
 }
 
-.main__card:nth-child(6) .filter {
+.filter-sixth {
   filter: hue-rotate(0.9turn) saturate(150%);
 }
 
-.main__card:nth-child(7) .filter {
+.filter-seventh {
   filter: sepia(150%);
 }
 
-.main__card:nth-child(8) .filter {
+.filter-eighth {
   filter: contrast(125%) saturate(125%);
 }
 
@@ -271,6 +327,7 @@ button {
   width: 39px;
   height: 36px;
   padding: 0;
+  transition: outline 0.3s;
   cursor: pointer;
 }
 
@@ -279,90 +336,19 @@ button {
 }
 
 .card__like-button {
-  position: relative;
-  border: 2px solid var(--accent-color);
-  background-color: var(--main-background-color);
-  width: 130px;
-  height: 38px;
+  display: grid;
+  grid-template-columns: 126px;
+  grid-template-rows: min-content;
+  align-content: center;
   justify-self: flex-end;
-  transition: box-shadow 0.3s, background-color 0.3s;
-  cursor: pointer;
 }
 
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 var(--text-color);
-}
-
-.card__like-buttonfocus {
-  outline: none;
-}
-
-.card__like-button:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  width: 100%;
-  height: 100%;
-  background: var(--text-color);
-  transition: transform 0.5s ease-in-out;
-}
-
-.card__like-button:hover:after {
-  transform: scaleX(1);
-}
-
-.button__text {
-  position: relative;
-  mix-blend-mode: difference;
-  font-family: var(--accent-font-family);
-  font-size: 14px;
-  color: var(--difference-color);
-  z-index: 1;
-}
-
-.button__save {
-  position: relative;
-  border: 2px solid var(--accent-color);
-  background-color: var(--main-background-color);
+.main__button-save {
   width: 335px;
   height: 51px;
+/* Я могу ошибаться, но разве кнопка это текстовый блок? */
   justify-self: flex-end;
-  transition: box-shadow 0.3s, background-color 0.3s;
   margin: 50px auto 105px;
-  cursor: pointer;
-}
-
-.button__save:focus-visible {
-  box-shadow: 2px 2px 0 var(--text-color);
-}
-
-.button__save:focus {
-  outline: none;
-}
-
-.button__save:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  width: 100%;
-  height: 100%;
-  background: var(--text-color);
-  transition: transform 0.5s ease-in-out;
-}
-
-.button__save:hover:after {
-  transform: scaleX(1);
-}
-
-.use {
-  width: 100%;
-  height: 100%;
 }
 
 .floppy-icon {
@@ -374,8 +360,11 @@ button {
 }
 
 dialog[open] {
-  max-inline-size: 357px;
   display: flex;
+}
+
+.main__dialog {
+  max-inline-size: 357px;
   flex-direction: column;
   background-color: var(--main-background-color);
   border: 2px solid var(--accent-color);
@@ -384,16 +373,17 @@ dialog[open] {
 }
 
 dialog::backdrop {
-  background-color: rgba(0 0 0 / 0.8);
+  background-color: rgba(0 0 0 / 0.7);
 }
 
-.save__dialog-content {
+.main__dialog-content {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 20px;
 }
 
-.dialog__floppy-icon {
+.main__dialog-floppy-icon {
   width: 39px;
   height: 39px;
   position: relative;
@@ -401,47 +391,43 @@ dialog::backdrop {
   z-index: 1;
 }
 
-.save__dialog-text {
+.main__dialog-text {
   width: 234px;
-  position: relative;
-  mix-blend-mode: difference;
   font-family: var(--accent-font-family);
+  color: var(--text-color);
   font-size: 14px;
-  color: var(--difference-color);
-  z-index: 1;
+  line-height: 21px;
 }
 
-.save__dialog-button {
-  position: relative;
-  border: 2px solid var(--accent-color);
-  background-color: var(--main-background-color);
+.main__dialog-button {
   width: 293px;
   height: 38px;
-  transition: box-shadow 0.3s, background-color 0.3s;
-  cursor: pointer;
+  /* Я могу ошибаться, но разве кнопка это текстовый блок? */
 }
 
-.save__dialog-button:focus-visible {
-  box-shadow: 2px 2px 0 var(--text-color);
-}
+@media (width <=375px) {
 
-.bsave__dialog-button:focus {
-  outline: none;
-}
+  .header {
+    grid-template-rows: 120px min-content min-content;
+  }
 
-.save__dialog-button:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  width: 100%;
-  height: 100%;
-  background: var(--text-color);
-  transition: transform 0.5s ease-in-out;
-}
+  .main__card-title {
+    min-block-size: 52px;
+  }
 
-.save__dialog-button:hover:after {
-  transform: scaleX(1);
+  .main__button-save {
+    max-inline-size: 306px; /* это ведь не фиксированная ширина... */
+    min-block-size: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .floppy-icon {
+    width: 28px;
+    height: 28px;
+  }
+
 }

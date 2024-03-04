@@ -18,11 +18,11 @@
   <script src="./scripts/set-theme.js"></script>
 </head>
 
-<body class="page background">
+<body class="page page__background">
   <header class="header">
     <div class="header__title">
-      <h1 class="header__main-title">&lt;/HTML&gt;</h1>
-      <h2 class="header__subtitle">ЗАКРЫВАЮЩИЙ ТЕГ</h2>
+      <a href="#" class="header__main-title">&lt;/HTML&gt;</a>
+      <h1 class="header__subtitle">ЗАКРЫВАЮЩИЙ ТЕГ</h1>
     </div>
     <nav class="theme-menu header__theme-menu">
       <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -46,13 +46,13 @@
     </nav>
   </header>
   <main>
-    <div class="main">
+    <section class="main__cards">
       <ul class="main__card-list">
         <li class="main__card">
-          <h3 class="main__card-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+          <h2 class="main__card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
           <div class="main__card-container">
-            <img src="./images/1.jpg" class="main__card-image filter" alt="додзё">
-            <p class="main__card-watermark">&lt;/HTML&gt;</p>
+            <img src="./images/1.jpg" class="main__card-image filter-first" alt="додзё" loading="lazy">
+            <span class="main__card-watermark" aria-hidden="true">&lt;/HTML&gt;</span>
           </div>
           <div class="main__card-content">
             <p class="main__card-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и
@@ -60,7 +60,7 @@
               возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
             <p class="main__card-text">"Человек должен учиться всю жизнь"</p>
             <div class="main__card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="transparent"
                   xmlns="http://www.w3.org/2000/svg">
                   <g class="heart">
@@ -79,17 +79,17 @@
                     fill="var(--heart-sparks)" />
                 </svg>
               </button>
-              <button type="button" class="card__like-button">
+              <button type="button" class="card__like-button button__style">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </div>
         </li>
         <li class="main__card">
-          <h3 class="main__card-title">1 спринт: Я — чистый лист</h3>
+          <h2 class="main__card-title">1 спринт: Я — чистый лист</h2>
           <div class="main__card-container">
-            <img src="./images/2.jpg" class="main__card-image filter" alt="юные самураи учатся">
-            <p class="main__card-watermark">&lt;/HTML&gt;</p>
+            <img src="./images/2.jpg" class="main__card-image filter-second" alt="юные самураи учатся" loading="lazy">
+            <span class="main__card-watermark" aria-hidden="true">&lt;/HTML&gt;</span>
           </div>
           <div class="main__card-content">
             <p class="main__card-text">На первых этапах мы работали со страхами и сомнениями, которые часто испытывают
@@ -98,7 +98,7 @@
               сложно? что, если я не справлюсь?</p>
             <p class="main__card-text">"Чтобы добиться цели, нужно пребывать в чистом и незамутнённом состоянии ума"</p>
             <div class="main__card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="transparent"
                   xmlns="http://www.w3.org/2000/svg">
                   <g class="heart">
@@ -117,17 +117,17 @@
                     fill="var(--heart-sparks)" />
                 </svg>
               </button>
-              <button type="button" class="card__like-button">
+              <button type="button" class="card__like-button button__style">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </div>
         </li>
         <li class="main__card">
-          <h3 class="main__card-title">1 спринт: А если не получится?</h3>
+          <h2 class="main__card-title">1 спринт: А если не получится?</h2>
           <div class="main__card-container">
-            <img src="./images/3.jpg" class="main__card-image filter" alt="самурай практикуется в каллиграфии">
-            <p class="main__card-watermark">&lt;CSS&gt;</p>
+            <img src="./images/3.jpg" class="main__card-image filter-third" alt="самурай практикуется в каллиграфии" loading="lazy">
+            <span class="main__card-watermark" aria-hidden="true">&lt;CSS&gt;</span>
           </div>
           <div class="main__card-content">
             <p class="main__card-text">Первый проект — позади! Но это всё ещё самое начало пути. Радость могла быстро
@@ -136,7 +136,7 @@
             <p class="main__card-text">"Даже плохой писарь достигнет высот в искусстве каллиграфии, если он будет
               учиться по хорошим образцам и приложит серьёзные усилия"</p>
             <div class="main__card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="transparent"
                   xmlns="http://www.w3.org/2000/svg">
                   <g class="heart">
@@ -155,17 +155,17 @@
                     fill="var(--heart-sparks)" />
                 </svg>
               </button>
-              <button type="button" class="card__like-button">
+              <button type="button" class="card__like-button button__style">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </div>
         </li>
         <li class="main__card">
-          <h3 class="main__card-title">2 спринт: Погоня за идеалом</h3>
+          <h2 class="main__card-title">2 спринт: Погоня за идеалом</h2>
           <div class="main__card-container">
-            <img src="./images/4.jpg" class="main__card-image filter" alt="самурай тренируется с катаной">
-            <p class="main__card-watermark">&lt;desigions&gt;</p>
+            <img src="./images/4.jpg" class="main__card-image filter-fourth" alt="самурай тренируется с катаной" loading="lazy">
+            <span class="main__card-watermark" aria-hidden="true">&lt;desigions&gt;</span>
           </div>
           <div class="main__card-content">
             <p class="main__card-text">На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы понять, как
@@ -174,7 +174,7 @@
             <p class="main__card-text">"Кто готов трудиться постоянно, исполнится мудрости независимо от достоинств и
               недостатков, данных ему природой"</p>
             <div class="main__card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="transparent"
                   xmlns="http://www.w3.org/2000/svg">
                   <g class="heart">
@@ -193,17 +193,17 @@
                     fill="var(--heart-sparks)" />
                 </svg>
               </button>
-              <button type="button" class="card__like-button">
+              <button type="button" class="card__like-button button__style">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </div>
         </li>
         <li class="main__card">
-          <h3 class="main__card-title">2 спринт: О тех, кто рядом</h3>
+          <h2 class="main__card-title">2 спринт: О тех, кто рядом</h2>
           <div class="main__card-container">
-            <img src="./images/5.jpg" class="main__card-image filter" alt="самураи">
-            <p class="main__card-watermark">care</p>
+            <img src="./images/5.jpg" class="main__card-image filter-fifth" alt="самураи" loading="lazy">
+            <span class="main__card-watermark" aria-hidden="true">care</span>
           </div>
           <div class="main__card-content">
             <p class="main__card-text">Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни
@@ -212,7 +212,7 @@
               рядом есть единомышленники, не правда ли?</p>
             <p class="main__card-text">"Чтобы добиться успеха в деле, выслушай мнение со стороны"</p>
             <div class="main__card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="transparent"
                   xmlns="http://www.w3.org/2000/svg">
                   <g class="heart">
@@ -231,24 +231,24 @@
                     fill="var(--heart-sparks)" />
                 </svg>
               </button>
-              <button type="button" class="card__like-button">
+              <button type="button" class="card__like-button button__style">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </div>
         </li>
         <li class="main__card">
-          <h3 class="main__card-title">3 спринт: Обходные стратегии</h3>
+          <h2 class="main__card-title">3 спринт: Обходные стратегии</h2>
           <div class="main__card-container">
-            <img src="./images/6.jpg" class="main__card-image filter" alt="за миг до сражения">
-            <p class="main__card-watermark">&lt;support&gt;</p>
+            <img src="./images/6.jpg" class="main__card-image filter-sixth" alt="за миг до сражения" loading="lazy">
+            <span class="main__card-watermark" aria-hidden="true">&lt;support&gt;</span>
           </div>
           <div class="main__card-content">
             <p class="main__card-text">На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло
               показаться, что решения просто иссякли. Значит, пришло время посмотреть на задачу под другим углом.</p>
             <p class="main__card-text">"Совершенствуйся постоянно, каждый день, на протяжении всей жизни"</p>
             <div class="main__card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="transparent"
                   xmlns="http://www.w3.org/2000/svg">
                   <g class="heart">
@@ -267,17 +267,17 @@
                     fill="var(--heart-sparks)" />
                 </svg>
               </button>
-              <button type="button" class="card__like-button">
+              <button type="button" class="card__like-button button__style">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </div>
         </li>
         <li class="main__card">
-          <h3 class="main__card-title">3 спринт: Когда опускаются руки</h3>
+          <h2 class="main__card-title">3 спринт: Когда опускаются руки</h2>
           <div class="main__card-container">
-            <img src="./images/7.jpg" class="main__card-image filter" alt="самурай отдыхает">
-            <p class="main__card-watermark">&lt;lifes-style: none;&gt;</p>
+            <img src="./images/7.jpg" class="main__card-image filter-seventh" alt="самурай отдыхает" loading="lazy">
+            <span class="main__card-watermark" aria-hidden="true">&lt;lifes-style: none;&gt;</span>
           </div>
           <div class="main__card-content">
             <p class="main__card-text">Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде
@@ -285,7 +285,7 @@
               пожить. В такие моменты очень нужна концентрация. Вспомните, откуда вы её черпали.</p>
             <p class="main__card-text">"Человек, который впадает в тоску, встречаясь с невзгодами, бесполезен"</p>
             <div class="main__card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="transparent"
                   xmlns="http://www.w3.org/2000/svg">
                   <g class="heart">
@@ -304,17 +304,17 @@
                     fill="var(--heart-sparks)" />
                 </svg>
               </button>
-              <button type="button" class="card__like-button">
+              <button type="button" class="card__like-button button__style">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </div>
         </li>
         <li class="main__card">
-          <h3 class="main__card-title">«Сейчас я здесь»</h3>
+          <h2 class="main__card-title">«Сейчас я здесь»</h2>
           <div class="main__card-container">
-            <img src="./images/8.jpg" class="main__card-image filter" alt="самурай в мире грез">
-            <p class="main__card-watermark">&lt;experience&gt;</p>
+            <img src="./images/8.jpg" class="main__card-image filter-eighth" alt="самурай в мире грез" loading="lazy">
+            <span class="main__card-watermark" aria-hidden="true">&lt;experience&gt;</span>
           </div>
           <div class="main__card-content">
             <p class="main__card-text">Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых,
@@ -324,7 +324,7 @@
             <p class="main__card-text">"Будь верен мысли одного лишь мгновения и бойся отвлечений. Не рассеивай внимание
               ни на что иное, а живи, следуя одной мысли за другой"</p>
             <div class="main__card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="transparent"
                   xmlns="http://www.w3.org/2000/svg">
                   <g class="heart">
@@ -343,34 +343,33 @@
                     fill="var(--heart-sparks)" />
                 </svg>
               </button>
-              <button type="button" class="card__like-button">
+              <button type="button" class="card__like-button button__style">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </div>
         </li>
       </ul>
-      <button type="button" class="button__save">
+      <button type="button" class="main__button-save button__style" onclick="window['dialog-save'].showModal();" aria-controls="dialog-save">
         <svg viewBox="0 0 40 40" class="floppy-icon">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
-        <span class="button__text" onclick="window['dialog-save'].showModal();" aria-controls="dialog-save">Сохранить на
-          память</span>
+        <span class="button__text">Сохранить на память</span>
       </button>
-      <dialog id="dialog-save" class="save__dialog">
-        <div class="save__dialog-content">
-          <svg class="dialog__floppy-icon" xmlns="http://www.w3.org/2000/svg">
+      <dialog id="dialog-save" class="main__dialog">
+        <div class="main__dialog-content">
+          <svg class="main__dialog-floppy-icon" xmlns="http://www.w3.org/2000/svg">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-          <p class="save__dialog-text">Вставьте
+          <p class="main__dialog-text uppercase">Вставьте
             дискету, чтобы продолжить</p>
         </div>
         <form method="dialog">
-          <button class="save__dialog-button" onclick="window['dialog-save'].close();"><span
-              class="button__text">ок</span></button>
+          <button type="button" class="main__dialog-button button__style" onclick="window['dialog-save'].close();"><span
+              class="button__text uppercase">ок</span></button>
         </form>
       </dialog>
-    </div>
+    </section>
   </main>
   <script src="./scripts/like.js"></script>
 </body>
