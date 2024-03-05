@@ -5,29 +5,6 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-:root.theme-dark {
-  --main-font-family: 'Inter', sans-serif;
-  --accent-font-family: 'PressStart2P-Regular', sans-serif;
-  --page-background-color: #000;
-  --main-background-color: #000;
-  --background-lines: #000;
-  --background-gradient-first: #007f0c;
-  --background-gradient-second: #004306;
-  --text-color: #00CC14;
-  --difference-color: #00CC14;
-  --accent-color: #00CC14;
-  --watermark-outline-color: #000;
-  --header-font-weight: 400;
-  --main-font-weight: 465;
-  --bold-font-weight: 785;
-  --heart-contour: #00CC14;
-  --heart-main-body: #00CC14;
-  --heart-core: #00CC14;
-  --heart-sparks: #FF0000;
-  --heart-red: #FF0000;
-  --gradient-opacity: 0%;
-}
-
 :root.theme-light {
   --main-font-family: 'Inter', sans-serif;
   --accent-font-family: 'PressStart2P-Regular', sans-serif;
@@ -74,39 +51,4 @@
     --heart-red: #FF0000;
     --gradient-opacity: 0.01%;
   }
-
-  .page {
-    background-color: var(--page-background-color), #FFF;
-  }
-
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --main-font-family: 'Inter', sans-serif;
-    --accent-font-family: 'PressStart2P-Regular', sans-serif;
-    --page-background-color: #000;
-    --main-background-color: #000;
-    --background-lines: #000;
-    --background-gradient-first: #007f0c;
-    --background-gradient-second: #004306;
-    --text-color: #00CC14;
-    --difference-color: #00CC14;
-    --accent-color: #00CC14;
-    --watermark-outline-color: #000;
-    --header-font-weight: 400;
-    --main-font-weight: 465;
-    --bold-font-weight: 785;
-    --heart-contour: #00CC14;
-    --heart-main-body: #00CC14;
-    --heart-core: #00CC14;
-    --heart-sparks: #FF0000;
-    --heart-red: #FF0000;
-    --gradient-opacity: 0%;
-  }
-
-  .page {
-    background-color: var(--page-background-color), #000;
-  }
-
-} */
